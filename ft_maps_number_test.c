@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sharps_test.c                                   :+:      :+:    :+:   */
+/*   ft_maps_number_test.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekruhliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 15:45:07 by ekruhliu          #+#    #+#             */
-/*   Updated: 2017/11/22 15:45:08 by ekruhliu         ###   ########.fr       */
+/*   Created: 2017/11/23 14:19:05 by ekruhliu          #+#    #+#             */
+/*   Updated: 2017/11/23 14:19:06 by ekruhliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sharps_test(char **file)
+int	ft_maps_number_test(char **file)
 {
-	int i;
-	int n;
-	int sharps;
+	int maps;
 	int result;
 
-	i = 0;
-	n = 0;
-	sharps = 0;
-	result = 0;
-	while (file[n])
-	{
-		while (file[n][i])
-		{
-			if (file[n][i] == '#')
-				sharps++;
-			if (sharps == 4)
-			{
-				result++;
-				sharps = 0;
-			}
-			i++;
-		}
-		i = 0;
-		n++;
-	}
-	if (result == n)
-		return (1);
-	else
-		return (0);
+	maps = 0;
+	result = 1;
+	while (file[maps])
+		maps++;
+	if (maps > 25)
+		result = 0;
+	return (result);
 }

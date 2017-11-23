@@ -20,7 +20,8 @@
 # include <string.h>
 
 # define BUFF_SIZE 10000
-# define ERROR "error"
+# define ERROR write(1, "error\n", 6);
+# define USAGE write(1, "usage: ./fillit source_file\n", 28);
 # define PALKA ((file[n][i] == '#') && (file[n][i + 5] == '#') && (file[n][i + 10] == '#') && (file[n][i + 15] == '#'))
 # define PALKA_LEGIT ((file[n][i] == '#') && (file[n][i + 1] == '#') && (file[n][i + 2] == '#') && (file[n][i + 3] == '#'))
 # define ZMEIKA_SYDA ((file[n][i] == '#') && (file[n][i + 1] == '#') && (file[n][i + 6] == '#') && (file[n][i + 7] == '#'))
@@ -48,6 +49,8 @@ int		ft_dots_test(char **file);
 int		ft_newlines_test(char **file);
 int		ft_sharps_test(char **file);
 int		ft_finale_grade(char **file);
-int		ft_figure_test(char **file);
+int		ft_figures_test(char **file);
+int		ft_maps_number_test(char **file);
+char	**ft_letters(char **file);
 
 #endif

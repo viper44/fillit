@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
-
 int	ft_newlines_test(char **file)
 {
 	int i;
@@ -30,10 +28,12 @@ int	ft_newlines_test(char **file)
 			if (file[n][i] == '\n')
 				newlines++;
 			if (newlines == 3)
+			{
 				result++;
+				newlines = 0;
+			}
 			i++;
 		}
-		newlines = 0;
 		i = 0;
 		n++;
 	}

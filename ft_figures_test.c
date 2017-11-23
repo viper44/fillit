@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_figure_test.c                                   :+:      :+:    :+:   */
+/*   ft_figures_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekruhliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "header.h"
 
-int	ft_figure_test(char **file)
+int	ft_figures_test(char **file)
 {
 	int i;
 	int n;
@@ -33,10 +33,12 @@ int	ft_figure_test(char **file)
 				|| FUCK_YOU_SVERHY || FUCK_YOU_SPRAVA || FUCK_YOU_SLEVA)
 				figure++;
 			if (figure == 1)
+			{
 				result++;
+				figure = 0;
+			}
 			i++;
 		}
-		figure = 0;
 		i = 0;
 		n++;
 	}

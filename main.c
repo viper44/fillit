@@ -18,20 +18,22 @@ int	main(int argc, char **argv)
 	int test_result;
 
 	i = 0;
-	(void)argc;
+	if (argc != 2)
+		USAGE;
 	test_result = 0;
 	char **xxx = ft_open_read_close(argv[1]);
+	if (xxx == NULL)
+		return (0);
+	if (ft_finale_grade(xxx) == 1)
+		test_result = 1;
+	else
+		ERROR;
+	if (test_result == 1)
+		ft_letters(xxx);
 	while (xxx[i])
 	{
 		printf("%s\n", xxx[i]);
 		i++;
 	}
-	if (ft_finale_grade(xxx) == 1)
-	{
-		printf("%s\n", "valid");
-		test_result = 1;
-	}
-	else
-		printf("%s\n", "unvalid");
-	return(test_result);
+	return(0);
 }

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
-
 int	ft_dots_test(char **file)
 {
 	int i;
@@ -29,11 +27,13 @@ int	ft_dots_test(char **file)
 		{
 			if (file[n][i] == '.')
 				dots++;
-			if (dots == 12 || dots == 16)
+			if (dots == 12)
+			{
 				result++;
+				dots = 0;
+			}
 			i++;
 		}
-		dots = 0;
 		i = 0;
 		n++;
 	}

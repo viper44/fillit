@@ -18,20 +18,14 @@ int	ft_finale_grade(char **file)
 	int test_2;
 	int test_3;
 	int test_4;
-	char **my_file;
-	int result;
+	int	test_5;
 
-	result = 0;
-	my_file = file;
-	test_1 = ft_dots_test(my_file);
-	printf("%d\n", test_1);
-	test_2 = ft_sharps_test(my_file);
-	printf("%d\n", test_2);
-	test_3 = ft_newlines_test(my_file);
-	printf("%d\n", test_3);
-	test_4 = ft_figure_test(my_file);
-	printf("%d\n", test_4);
-	if (test_1 == 1 && test_2 == 1 && test_3 == 1 && test_4 == 1)
-		result = 1;
-	return (result); 
+	test_1 = ft_dots_test(file);
+	test_2 = ft_sharps_test(file);
+	test_3 = ft_newlines_test(file);
+	test_4 = ft_figures_test(file);
+	test_5 = ft_maps_number_test(file);
+	if (test_1 == 1 && test_2 == 1 && test_3 == 1 && test_4 == 1 && test_5 == 1)
+		return (1);
+	return (0);
 }

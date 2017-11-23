@@ -12,10 +12,10 @@
 
 #include "header.h"
 
-static int        ft_cubes_count(const char *file)
+static int		ft_cubes_count(const char *file)
 {
-    int            i;
-    int            n;
+    int			i;
+    int			n;
     i = 0;
     n = 0;
     while (file[i] != '\0')
@@ -25,6 +25,16 @@ static int        ft_cubes_count(const char *file)
         i++;
     }
 	return (n + 1);
+}
+
+static size_t	ft_strlen(const char *str)
+{
+	size_t		len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }
 
 char			**ft_split(char const *file)
@@ -39,6 +49,11 @@ char			**ft_split(char const *file)
 	n = 0;
 	train = 0;
 	cubes = ft_cubes_count(file);
+	if ((ft_strlen(file) + 1) % 21 != 0)
+	{
+		ERROR;
+		return (NULL);
+	}
 	if (!(s_a =(char **)malloc(sizeof(char*) * (cubes + 1))))
 		{
 			free(s_a);
