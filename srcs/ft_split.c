@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -10,7 +11,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
 static int		ft_cubes_count(const char *file)
 {
@@ -55,10 +56,10 @@ char			**ft_split(char const *file)
 		return (NULL);
 	}
 	if (!(s_a =(char **)malloc(sizeof(char*) * (cubes + 1))))
-		{
-			free(s_a);
-			return (NULL);
-		}
+	{
+		free(s_a);
+		return (NULL);
+	}
 	while (n < cubes)
 	{
 		if (!(s_a[n] = (char*)malloc(sizeof(char) * 21)))
@@ -80,4 +81,3 @@ char			**ft_split(char const *file)
 	s_a[n] = 0;
 	return (s_a);
 }
-

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_finale_grade.c                                  :+:      :+:    :+:   */
+/*   ft_open_read_close.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekruhliu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 15:40:02 by ekruhliu          #+#    #+#             */
-/*   Updated: 2017/11/22 15:40:13 by ekruhliu         ###   ########.fr       */
+/*   Created: 2017/11/21 13:44:02 by ekruhliu          #+#    #+#             */
+/*   Updated: 2017/11/21 13:44:02 by ekruhliu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../header.h"
 
-int	ft_finale_grade(char **file)
+char	**ft_open_read_close(char *file_name)
 {
-	int	test_1;
-	int test_2;
-	int test_3;
-	int test_4;
-	int	test_5;
+	int		fd;
+	int		size;
+	char	buffer[BUFF_SIZE];	
+	char	**ret;
 
-	test_1 = ft_dots_test(file);
-	test_2 = ft_sharps_test(file);
-	test_3 = ft_newlines_test(file);
-	test_4 = ft_figures_test(file);
-	test_5 = ft_maps_number_test(file);
-	if (test_1 == 1 && test_2 == 1 && test_3 == 1 && test_4 == 1 && test_5 == 1)
-		return (1);
-	return (0);
+	fd = open(file_name, O_RDONLY);
+	if (fd <= 0)
+		return (0);
+	else
+	{
+		size = read(fd, buffer, BUFF_SIZE);
+		buffer[size] = '\0';
+		close(fd);
+		ret = ft_split(buffer);
+		return (ret);
+	}
 }
