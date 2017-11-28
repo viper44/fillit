@@ -12,11 +12,11 @@
 
 #include "../header.h"
 
-t_cordinate	*ft_ispistolet_legit_l(**file)
+t_cordinate	*ft_ispistolet_legit_l(char **file)
 {
 	int i;
 	int n;
-	t_cordinate* cordinate;
+	t_cordinate *cordinate;
 
 	cordinate = (t_cordinate*)malloc(sizeof(t_cordinate));
 	i = 0;
@@ -29,7 +29,7 @@ t_cordinate	*ft_ispistolet_legit_l(**file)
 			{
 				cordinate->first = 0;
 				cordinate->second = 3;
-				cordinate->thirt = 4;
+				cordinate->third = 4;
 				cordinate->fourth = 5;
 				return (cordinate);
 			}
@@ -37,4 +37,5 @@ t_cordinate	*ft_ispistolet_legit_l(**file)
 		}
 		n++;
 	}
+	return (0);
 }

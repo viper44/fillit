@@ -12,11 +12,11 @@
 
 #include "../header.h"
 
-t_cordinate	*ft_isfuck_sprava(**file)
+t_cordinate	*ft_isfuck_sprava(char **file)
 {
 	int i;
 	int n;
-	t_cordinate* cordinate;
+	t_cordinate *cordinate;
 
 	cordinate = (t_cordinate*)malloc(sizeof(t_cordinate));
 	i = 0;
@@ -29,7 +29,7 @@ t_cordinate	*ft_isfuck_sprava(**file)
 			{
 				cordinate->first = 0;
 				cordinate->second = 5;
-				cordinate->thirt = 6;
+				cordinate->third = 6;
 				cordinate->fourth = 10;
 				return (cordinate);
 			}
@@ -37,4 +37,5 @@ t_cordinate	*ft_isfuck_sprava(**file)
 		}
 		n++;
 	}
+	return (0);
 }

@@ -12,25 +12,9 @@
 
 #include "../header.h"
 
-// static int		ft_cubes_count(const char *file)
-// {
-//     int			i;
-//     int			n;
-//     i = 0;
-//     n = 0;
-//     while (file[i] != '\0')
-//     {
-//         if ((file[i] == '\n' && file[i + 1] == '\n'))
-//             n++;
-//         i++;
-//     }
-// 	return (n + 1);
-// }
-
 t_cordinate			**ft_struct_split(char **file)
 {
 	t_cordinate		**s_a;
-	//int			cubes;
 	int			n;
 	int			x;
 
@@ -38,7 +22,6 @@ t_cordinate			**ft_struct_split(char **file)
 	x = 0;
 	while (file[x])
 		x++;
-	//cubes = ft_cubes_count(file);
 	if (!(s_a =(t_cordinate**)malloc(sizeof(t_cordinate*) * x)))
 	{
 		free(s_a);

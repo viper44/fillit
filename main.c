@@ -35,8 +35,16 @@ int	main(int argc, char **argv)
 		ERROR;
 	xyx = ft_struct_split(xxx);
 	if (test_result == 1)
+	{
 		xyx = ft_figure_part_1(xxx, xyx);
-	printf("%d %d %d %d\n", xyx[n]->first, xyx[n]->second, xyx[n]->third, xyx[n]->fourth);
+		xyx = ft_figure_part_2(xxx, xyx);
+		xyx = ft_figure_part_3(xxx, xyx);
+	}
+	if (xyx[n])
+	{
+		printf("%d %d %d %d\n", xyx[n]->first, xyx[n]->second, xyx[n]->third, xyx[n]->fourth);
+		n++;
+	}
 	// if (test_result == 1)
 	// 	ft_letters(xxx);
 	// while (xxx[i])

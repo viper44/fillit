@@ -26,6 +26,11 @@ typedef struct	s_cordinate
 	int			third;
 	int			fourth;
 }				t_cordinate;
+typedef struct	s_pack
+{
+	int n;
+	int h;
+}				t_pack;
 # define BUFF_SIZE 10000
 # define ERROR write(1, "error\n", 6);
 # define USAGE write(1, "usage: ./fillit source_file\n", 28);
@@ -61,25 +66,26 @@ int			ft_maps_number_test(char **file);
 char		**ft_letters(char **file);
 t_cordinate	*ft_ispalka(char **file);
 t_cordinate	**ft_figure_part_1(char **file, t_cordinate **s_a);
+t_cordinate	**ft_figure_part_2(char **file, t_cordinate **s_a);
+t_cordinate	**ft_figure_part_3(char **file, t_cordinate **s_a);
 t_cordinate	**ft_struct_split(char **file);
-// t_cordinate	*ft_is_h_palka(**file);
-// t_cordinate	*ft_isfuck_sleva(**file);
-// t_cordinate	*ft_isfuck_snizu(**file);
-// t_cordinate	*ft_isfuck_sprava(**file);
-// t_cordinate	*ft_isfuck_sverhy(**file);
-// t_cordinate	*ft_iskorobka(**file);
-// t_cordinate	*ft_ismolnia_syda(**file);
-// t_cordinate	*ft_ismolnia_tyda(**file);
-// t_cordinate	*ft_ispalka(**file);
-// t_cordinate	*ft_ispistolet_legit_l(**file);
-// t_cordinate	*ft_ispistolet_legit_r(**file);
-// t_cordinate	*ft_ispistolet_stoit_l(**file);
-// t_cordinate	*ft_ispistolet_stoit_r(**file);
-// t_cordinate	*ft_istopor_syda(**file);
-// t_cordinate	*ft_istopor_tyda(**file);
-// t_cordinate	*ft_iszmeika_syda(**file);
-// t_cordinate	*ft_iszmeika_tyda(**file);
-// t_cordinate	*ft_styl_syda(**file);
-// t_cordinate	*ft_styl_tyda(**file);
+t_cordinate	*ft_is_h_palka(char **file);
+t_cordinate	*ft_isfuck_sleva(char **file);
+t_cordinate	*ft_isfuck_snizu(char **file);
+t_cordinate	*ft_isfuck_sprava(char **file);
+t_cordinate	*ft_isfuck_sverhy(char **file);
+t_cordinate	*ft_iskorobka(char **file);
+t_cordinate	*ft_ismolnia_syda(char **file);
+t_cordinate	*ft_ismolnia_tyda(char **file);
+t_cordinate	*ft_ispistolet_legit_l(char **file);
+t_cordinate	*ft_ispistolet_legit_r(char **file);
+t_cordinate	*ft_ispistolet_stoit_l(char **file);
+t_cordinate	*ft_ispistolet_stoit_r(char **file);
+t_cordinate	*ft_istopor_syda(char **file);
+t_cordinate	*ft_istopor_tyda(char **file);
+t_cordinate	*ft_iszmeika_syda(char **file);
+t_cordinate	*ft_iszmeika_tyda(char **file);
+t_cordinate	*ft_styl_syda(char **file);
+t_cordinate	*ft_styl_tyda(char **file);
 
 #endif

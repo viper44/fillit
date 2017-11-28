@@ -12,11 +12,11 @@
 
 #include "../header.h"
 
-t_cordinate	*ft_isfuck_snizu(**file)
+t_cordinate	*ft_isfuck_snizu(char **file)
 {
 	int i;
 	int n;
-	t_cordinate* cordinate;
+	t_cordinate *cordinate;
 
 	cordinate = (t_cordinate*)malloc(sizeof(t_cordinate));
 	i = 0;
@@ -29,7 +29,7 @@ t_cordinate	*ft_isfuck_snizu(**file)
 			{
 				cordinate->first = 0;
 				cordinate->second = 1;
-				cordinate->thirt = 2;
+				cordinate->third = 2;
 				cordinate->fourth = 6;
 				return (cordinate);
 			}
@@ -37,4 +37,5 @@ t_cordinate	*ft_isfuck_snizu(**file)
 		}
 		n++;
 	}
+	return (0);
 }

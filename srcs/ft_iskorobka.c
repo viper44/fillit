@@ -12,11 +12,11 @@
 
 #include "../header.h"
 
-t_cordinate	*ft_iskorobka(**file)
+t_cordinate	*ft_iskorobka(char **file)
 {
 	int i;
 	int n;
-	t_cordinate* cordinate;
+	t_cordinate *cordinate;
 
 	cordinate = (t_cordinate*)malloc(sizeof(t_cordinate));
 	i = 0;
@@ -29,7 +29,7 @@ t_cordinate	*ft_iskorobka(**file)
 			{
 				cordinate->first = 0;
 				cordinate->second = 1;
-				cordinate->thirt = 5;
+				cordinate->third = 5;
 				cordinate->fourth = 6;
 				return (cordinate);
 			}
@@ -37,4 +37,5 @@ t_cordinate	*ft_iskorobka(**file)
 		}
 		n++;
 	}
+	return (0);
 }
