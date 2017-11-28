@@ -56,7 +56,7 @@ typedef struct	s_pack
 
 int			ft_check_valid_file(char **s);
 char		**ft_open_read_close(char *file_name);
-char		**ft_split(char const *s);
+char		**ft_split(char *s);
 int			ft_dots_test(char **file);
 int			ft_newlines_test(char **file);
 int			ft_sharps_test(char **file);
@@ -64,6 +64,8 @@ int			ft_finale_grade(char **file);
 int			ft_figures_test(char **file);
 int			ft_maps_number_test(char **file);
 char		**ft_letters(char **file);
+int			ft_cubes_count(char *file);
+char		*ft_create_map(char **file);
 t_cordinate	*ft_ispalka(char **file);
 t_cordinate	**ft_figure_part_1(char **file, t_cordinate **s_a);
 t_cordinate	**ft_figure_part_2(char **file, t_cordinate **s_a);

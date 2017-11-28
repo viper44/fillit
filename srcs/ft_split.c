@@ -13,22 +13,22 @@
 
 #include "../header.h"
 
-static int		ft_cubes_count(const char *file)
-{
-    int			i;
-    int			n;
-    i = 0;
-    n = 0;
-    while (file[i] != '\0')
-    {
-        if ((file[i] == '\n' && file[i + 1] == '\n'))
-            n++;
-        i++;
-    }
-	return (n + 1);
-}
+// static int		ft_cubes_count(const char *file)
+// {
+//     int			i;
+//     int			n;
+//     i = 0;
+//     n = 0;
+//     while (file[i] != '\0')
+//     {
+//         if ((file[i] == '\n' && file[i + 1] == '\n'))
+//             n++;
+//         i++;
+//     }
+// 	return (n + 1);
+// }
 
-static size_t	ft_strlen(const char *str)
+static size_t	ft_strlen(char *str)
 {
 	size_t		len;
 
@@ -38,7 +38,7 @@ static size_t	ft_strlen(const char *str)
 	return (len);
 }
 
-char			**ft_split(char const *file)
+char			**ft_split(char *file)
 {
 	char		**s_a;
 	int			cubes;

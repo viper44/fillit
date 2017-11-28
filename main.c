@@ -17,12 +17,14 @@ int	main(int argc, char **argv)
 	int i;
 	int f;
 	int n;
+	char *map;
 	int test_result;
 	t_cordinate **xyx;
 
 	i = 0;
 	f = 0;
 	n = 0;
+	map = NULL;
 	if (argc != 2)
 		USAGE;
 	test_result = 0;
@@ -36,11 +38,18 @@ int	main(int argc, char **argv)
 	xyx = ft_struct_split(xxx);
 	if (test_result == 1)
 	{
+		map = ft_create_map(xxx);
+		printf("%s\n", map);
+	}
+	if (map == NULL)
+		return (0);
+	if (test_result == 1)
+	{
 		xyx = ft_figure_part_1(xxx, xyx);
 		xyx = ft_figure_part_2(xxx, xyx);
 		xyx = ft_figure_part_3(xxx, xyx);
 	}
-	if (xyx[n])
+	while (n < 2)
 	{
 		printf("%d %d %d %d\n", xyx[n]->first, xyx[n]->second, xyx[n]->third, xyx[n]->fourth);
 		n++;
